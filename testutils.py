@@ -5,9 +5,6 @@
 # utility methods for doctests in test.md
 ############################################
 
-from datetime import timedelta, date
-
-import time, subprocess, sys, MySQLdb
 import spynner
 import config
 
@@ -30,7 +27,7 @@ def loadPage(url):
         browser.load(url)
         return browser
     except SpynnerTimeout:
-        print "could not load page"
+        print("could not load page")
         return
 
 
